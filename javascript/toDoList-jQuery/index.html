@@ -102,11 +102,16 @@
   </div>
 
   <script>
-  function toggleDone() {
-    var checkbox = this;
+    function toggleDone() {
+      var checkbox = this;
 
-    $(checkbox).parent().toggleClass("completed");
-  }
+      $(checkbox).parent().toggleClass("completed");
+    };
+
+    $(document).ready(function() {
+      $("input[type=checkbox]").bind('change', toggleDone);
+      updateCounters();
+    });
   </script>
 </body>
 </html>
