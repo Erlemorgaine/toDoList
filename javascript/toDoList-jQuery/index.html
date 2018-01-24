@@ -112,6 +112,8 @@
       $("input[type=checkbox]").bind('change', toggleDone);
       updateCounters();
     });
+
+    $("#total-count").html($(".todo").length);
   </script>
 </body>
 </html>
